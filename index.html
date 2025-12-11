@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chinanu Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>I'm Chinanu</h1>
+      <p>Frontend Developer | Web Enthusiast | Lifelong Learner</p>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <h2>Welcome to My Portfolio</h2>
+      <p>
+        Hello! I’m Nwaohangwa Chinanu Godwin, a passionate frontend developer
+        dedicated to crafting beautiful and functional web experiences. Explore
+        my projects and skills below!
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Nwaohangwa Chinanu Godwin, a frontend developer and lifelong
+        learner from Nigeria. I specialize in building responsive, user-friendly
+        websites and web apps using HTML, CSS, and JavaScript. I enjoy turning
+        ideas into interactive experiences and am currently exploring modern
+        JavaScript frameworks to enhance my projects. My goal is to create web
+        solutions that are both functional and visually engaging.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Portfolio Website</li>
+        <li>Survey Form</li>
+        <li>Gaming App: Number Guessing + Crypto Mining</li>
+        <li>Secure User Login Demo</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Responsive Web Design</li>
+        <li>Version Control (Git)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <p>Have a question, project, or opportunity? Send me a message.</p>
+
+      <!-- Netlify Form (Corrected Structure) -->
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="contact-form"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
+        <p class="hidden">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Nwaohangwa Chinanu Godwin</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
