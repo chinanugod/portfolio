@@ -13,6 +13,23 @@ body {
   padding: 20px;
 }
 
+.nav{background:#0f1724;
+    padding:.8rem;
+    position:sticky;
+    top:0;
+    z-index:100}
+.nav ul{list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin:0;
+    padding:0}
+.nav a{color:#fff;
+    text-decoration:none;
+    font-weight:600}
+    
+
+    
 .hero{
   background: linear-gradient(180deg,#f8fafc,#fff);
   padding: 6rem 1rem;
