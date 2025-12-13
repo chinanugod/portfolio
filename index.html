@@ -70,11 +70,8 @@
       </ul>
     </section>
 
-    <section id="contact" class="contact-section">
-      <h2>Contact Me</h2>
-      <p>Have a question, project, or opportunity? Send me a message.</p>
-
-      <!-- Netlify Form (Corrected Structure) -->
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
       <form
         name="contact"
         method="POST"
@@ -83,27 +80,20 @@
         class="contact-form"
       >
         <input type="hidden" name="form-name" value="contact" />
-
         <p class="hidden">
           <label>Don’t fill this out: <input name="bot-field" /></label>
         </p>
-
         <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" name="name" required />
+          <label>Your name</label><input name="name" required />
         </div>
-
         <div class="form-group">
-          <label>Your Email</label>
-          <input type="email" name="email" required />
+          <label>Email</label><input type="email" name="email" required />
         </div>
-
         <div class="form-group">
-          <label>Your Message</label>
-          <textarea name="message" required></textarea>
+          <label>Message</label><textarea name="message" required></textarea>
         </div>
-
-        <button type="submit" class="send-btn">Send Message</button>
+        <button type="submit" class="btn">Send</button>
+        <p id="form-status" aria-live="polite"></p>
       </form>
     </section>
 
