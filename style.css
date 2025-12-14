@@ -148,3 +148,9 @@ footer {
   color: #fff;
   margin-top: 30px;
 }
+
+@media (max-width:600px){
+  .hero h1{font-size:1.6rem}
+  .nav ul{flex-wrap:wrap}
+  .projects-grid{grid-template-columns:1fr}
+}
