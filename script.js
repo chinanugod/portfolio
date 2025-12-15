@@ -28,6 +28,30 @@ const images = carousel.querySelectorAll("img");
 const prevBtn = carousel.querySelector(".prev");
 const nextBtn = carousel.querySelector(".next");
 
+let startX = 0;
+let endX = 0;
+
+carousel.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener("touchend", e => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const threshold = 50;
+
+  if (startX - endX > threshold) {
+    nextSlide();
+    startAutoSlide();
+  } else if (endX - startX > threshold) {
+    prevSlide();
+    startAutoSlide();
+  }
+}
+
 let index = 0;
 let intervalId = null;
 
