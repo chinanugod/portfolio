@@ -98,17 +98,38 @@
           </div>
         </article>
 
-        <!-- Chingowin Project -->
         <article class="project-card">
-          <img
-            src="assets/images/chingowin.png"
-            alt="Chingowin game and mining interface"
-          />
+          <div class="carousel" data-carousel>
+            <img
+              src="assets/images/chingowin.png"
+              alt="Chingowin main screen"
+              class="active"
+            />
+            <img
+              src="assets/images/chingowin-mining.png"
+              alt="Chingowin mining screen"
+            />
+            <img
+              src="assets/images/chingowin-stats.png"
+              alt="Chingowin stats screen"
+            />
+            <img
+              src="assets/images/chingowin-random.png"
+              alt="Chingowin random picker"
+            />
+
+            <button class="carousel-btn prev" aria-label="Previous image">
+              ‹
+            </button>
+            <button class="carousel-btn next" aria-label="Next image">›</button>
+          </div>
+
           <h3>Chingowin</h3>
           <p>
             A gamified web application featuring a number-guessing game and a
             crypto-style mining system.
           </p>
+
           <div class="project-links">
             <a href="#" class="btn">Live Demo</a>
             <a href="#" class="btn secondary">GitHub</a>
