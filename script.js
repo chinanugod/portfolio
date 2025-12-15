@@ -23,45 +23,55 @@ if (form) {
   });
 }
 
-const carousels = document.querySelectorAll('[data-carousel]');
+const carousel = document.querySelector(".carousel");
+const images = carousel.querySelectorAll("img");
+const prevBtn = carousel.querySelector(".prev");
+const nextBtn = carousel.querySelector(".next");
 
-carousels.forEach(carousel => {
-  const images = carousel.querySelectorAll('img');
-  const prevBtn = carousel.querySelector('.prev');
-  const nextBtn = carousel.querySelector('.next');
+let index = 0;
+let intervalId = null;
 
-  let index = 0;
-
-  function showImage(i) {
-    images.forEach(img => img.classList.remove('active'));
-    images[i].classList.add('active');
-  }
-
-  prevBtn.addEventListener('click', () => {
-    index = (index - 1 + images.length) % images.length;
-    showImage(index);
+function showImage(i) {
+  images.forEach((img, idx) => {
+    img.classList.toggle("active", idx === i);
   });
-
-  nextBtn.addEventListener('click', () => {
-    index = (index + 1) % images.length;
-    showImage(index);
-  });
-
-  setInterval(() => {
-  index = (index + 1) % images.length;
-  showImage(index);
-}, 4000);
-
-let interval = setInterval(nextSlide, 4000);
-
-carousel.addEventListener('mouseenter', () => clearInterval(interval));
-carousel.addEventListener('mouseleave', () => {
-  interval = setInterval(nextSlide, 4000);
-});
+}
 
 function nextSlide() {
   index = (index + 1) % images.length;
   showImage(index);
 }
+
+function prevSlide() {
+  index = (index - 1 + images.length) % images.length;
+  showImage(index);
+}
+
+function startAutoSlide() {
+  stopAutoSlide(); // ✅ prevent duplicates
+  intervalId = setInterval(nextSlide, 4000);
+}
+
+function stopAutoSlide() {
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+}
+
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+  startAutoSlide();
 });
+
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+  startAutoSlide();
+});
+
+carousel.addEventListener("mouseenter", stopAutoSlide);
+carousel.addEventListener("mouseleave", startAutoSlide);
+
+showImage(index);
+startAutoSlide();
 
