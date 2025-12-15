@@ -213,18 +213,19 @@ section {
 }
 
 
-.skills-list{display:flex;
+.skills-list{
+    display:flex;
     gap:.5rem;
     flex-wrap:wrap;
     list-style:none;
     padding:0}
 
-.skills-list li{background:#f3f4f6;
+.skills-list li{
+    background:#f3f4f6;
     padding:.4rem .8rem;
     border-radius:999px;
     font-weight:600;
     color:#374151}
-
 
 .contact-form .form-group {
   margin-bottom: 15px;
