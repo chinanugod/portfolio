@@ -39,9 +39,9 @@ body {
 .hero-profile img {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #50b3a2;
+  border-radius: 7%;
+  object-fit: contain;
+  border: 2px solid #50b3a2;
   margin-bottom: 1rem;
 }
 
