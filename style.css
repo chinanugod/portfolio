@@ -35,6 +35,38 @@ body {
   text-decoration:none;
   font-weight:600
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode section,
+body.dark-mode .project-card {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+body.dark-mode nav {
+  background: #111;
+}
+
+body.dark-mode nav a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .btn {
+  background-color: #50b3a2;
+  color: #fff;
+}
+
+body.dark-mode .btn-outline {
+  border: 2px solid #50b3a2;
+  color: #50b3a2;
+  background: transparent;
+}
+
     
 .hero {
   background: linear-gradient(180deg,#f8fafc,#fff);
@@ -51,17 +83,28 @@ body {
   margin-bottom: 1rem;
 }
 
-.hero-inner {max-width:900px;
-    margin:0 auto
+.hero-inner {
+  max-width:900px;
+  margin:0 auto
   }
 
-.hero h1 {font-size:2.2rem;
-    margin-bottom:.25rem
-  }
+.hero h1 {
+  font-size:2.2rem;
+  margin-bottom:.25rem;
+  color: #278072;
+}
 
-.tagline {color:#4b5563;
-    margin-bottom:1rem
-  }
+.tagline {
+  color:#6b7280;
+  margin-bottom:1rem
+}
+
+ .tagline ul {
+  list-style: none; /* used this to remove default bullets */
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+ }
 
 .btn {
   display:inline-block;
@@ -122,11 +165,6 @@ section {
   padding:1.25rem
   }
 
-.about p {
-  font-size:1.05rem;
-  color:#374151
-}
-
 .projects-grid {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -170,7 +208,7 @@ section {
   line-height: 1.4;
   color: #555;
 }
-
+  
 .project-card .project-links {
   margin-top: 10px;
   display: flex;

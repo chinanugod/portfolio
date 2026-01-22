@@ -99,3 +99,34 @@ carousel.addEventListener("mouseleave", startAutoSlide);
 showImage(index);
 startAutoSlide();
 
+// Dark Mode Toggle
+const darkModeBtn = document.getElementById("darkModeToggle");
+
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Toggle icon on button
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeBtn.textContent = "☀️"; // switch to sun for light mode
+  } else {
+    darkModeBtn.textContent = "🌙"; // moon for dark mode
+  }
+});
+
+// // Load saved preference
+// if (localStorage.getItem("darkMode") === "enabled") {
+//   document.body.classList.add("dark-mode");
+//   darkModeBtn.textContent = "☀️";
+// }
+
+// // Save preference on toggle
+// darkModeBtn.addEventListener("click", () => {
+//   document.body.classList.toggle("dark-mode");
+//   if (document.body.classList.contains("dark-mode")) {
+//     darkModeBtn.textContent = "☀️";
+//     localStorage.setItem("darkMode", "enabled");
+//   } else {
+//     darkModeBtn.textContent = "🌙";
+//     localStorage.setItem("darkMode", "disabled");
+//   }
+// });

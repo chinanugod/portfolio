@@ -16,10 +16,12 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
     <nav class="nav">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+
+        <button id="darkModeToggle" class="btn-outline">🌙</button>
       </ul>
     </nav>
 
@@ -30,9 +32,14 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
 
       <div class="hero-inner">
         <h1>Hi — I’m <strong>Chinanu Nwaohangwa</strong></h1>
-        <p class="tagline">
-          Frontend developer • building clean, responsive web experiences
-        </p>
+        <div class="tagline">
+          <ul>
+            <li>Frontend Developer</li>
+            <li>Cybersecurity Researcher</li>
+            <li>Content Creator</li>
+          </ul>
+        </div>
+
         <p class="cta">
           <a href="#projects" class="btn">My Projects</a>
           <a href="#contact" class="btn btn-outline">Contact</a>
@@ -43,18 +50,20 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
     <section id="home">
       <h2>Welcome to My Portfolio</h2>
       <p>
-        Hello! I’m Nwaohangwa Chinanu Godwin, a passionate frontend developer
-        dedicated to crafting beautiful and functional web experiences. Explore
-        my projects and skills below!
+        Hello! I’m a passionate frontend developer with an eye for security and
+        usability. I build responsive, accessible, and secure web experiences
+        that solve real problems. Explore my projects and skills below!
       </p>
     </section>
 
     <section id="about" class="section about">
       <h2>About Me</h2>
       <p>
-        I’m Nwaohangwa Chinanu Godwin, a frontend developer. I build responsive,
-        accessible websites with HTML, CSS and JavaScript. I’m learning modern
-        frameworks and enjoy solving real problems.
+        I’m Nwaohangwa Chinanu Godwin, a frontend developer with a strong
+        interest in cybersecurity. I build responsive, accessible, and secure
+        web interfaces using HTML, CSS, and JavaScript. I enjoy creating
+        real-world projects that solve problems, and I’m continuously learning
+        modern frameworks and best practices for safe, robust applications.
       </p>
     </section>
 
@@ -84,13 +93,17 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
         </article>
         <article class="project-card">
           <img
-            src="assets/images/codecrackles-signup.png"
-            alt="Secure signup UI screenshot"
+            src="assets/images/codecrackles_loading.png"
+            alt="Secure loading UI screenshot"
           />
-          <h3>Secure Signup UI on CodeCrackles</h3>
+          <img
+            src="assets/images/codecrackles_landing.png"
+            alt="Secure landing UI screenshot"
+          />
+
+          <h3>Splash - Landing on CodeCrackles</h3>
           <p>
-            A secure registration interface built as part of the CodeCrackles
-            project.
+            A clean and responsive landing page for the CodeCrackles project.
           </p>
           <div class="project-links">
             <a href="#" class="btn secondary">GitHub</a>
@@ -100,6 +113,10 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
         <!-- Cyber Survey Project -->
         <article class="project-card">
           <img src="assets/images/cybersurvey.png" alt="Cyber Survey project" />
+          <img
+            src="assets/images/cybersurvey-checkbox.png"
+            alt="Cyber Survey checkbox"
+          />
           <h3>Cyber Experience Survey</h3>
           <p>
             A survey-based project exploring cybersecurity awareness among
@@ -111,7 +128,7 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
               target="_blank"
               rel="noopener"
               class="btn"
-              >Experiment the Survey</a
+              >Take the Survey</a
             >
           </div>
         </article>
@@ -141,6 +158,13 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
               ‹
             </button>
             <button class="carousel-btn next" aria-label="Next image">›</button>
+          </div>
+
+          <div>
+            <img
+              src="assets/images/chingowin-challengeMode.png"
+              alt="Chingowin challenge mode"
+            />
           </div>
 
           <h3>Chingowin</h3>
@@ -230,7 +254,7 @@ clean, responsive web interfaces with HTML, CSS, and JavaScript. Real deployed p
     </section>
 
     <section id="contact" class="section contact">
-      <h2>Contact</h2>
+      <h2>Contact Me</h2>
       <p>Have a question, project, or opportunity? Send me a message.</p>
       <form
         name="contact"
