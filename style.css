@@ -326,7 +326,12 @@ section {
 .hidden {
   position: absolute;
   left: -9999px;
-} 
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
 
 button {
   background: #50b3a2;
